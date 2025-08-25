@@ -1,4 +1,4 @@
-/* General body style */
+/* GENERAL STYLES */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -7,20 +7,19 @@ body {
   background-color: #f9f9f9;
 }
 
-/* Header style */
+/* HEADER */
 header {
-  background-color: #4CAF50;
+  background-color: #4CAF50; /* editable in JS */
   color: white;
   padding: 20px;
 }
 
-/* Product section */
+/* PRODUCTS */
 .product {
   display: inline-block;
   margin: 20px;
 }
 
-/* Product images */
 .product img {
   width: 150px;
   height: 150px;
@@ -28,7 +27,7 @@ header {
   border-radius: 8px;
 }
 
-/* WhatsApp Button */
+/* WHATSAPP BUTTON */
 #whatsapp-btn {
   margin: 20px;
   padding: 15px 25px;
@@ -44,7 +43,7 @@ header {
   background-color: #128C7E;
 }
 
-/* Footer style */
+/* FOOTER */
 footer {
   background-color: #333;
   color: white;
