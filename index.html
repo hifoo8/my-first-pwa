@@ -3,48 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Small Shop</title>
-  <link rel="manifest" href="manifest.json">
+  <title>Macaron Store</title>
   <link rel="stylesheet" href="style.css">
-  <meta name="theme-color" content="#4CAF50">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#F9D5E5">
 </head>
 <body>
-  <!-- Header -->
-  <header id="shop-header">
-    <h1>My Small Shop</h1>
-    <p>Your tagline goes here</p>
-  </header>
 
-  <!-- Language Switch -->
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="logo">🍰</div>
+    <div class="store-title" id="store-title">Macaron Store</div>
+  </div>
+
+  <!-- LANGUAGE SWITCH -->
   <div id="language-switch">
     <button data-lang="en">English</button>
     <button data-lang="ar">العربية</button>
   </div>
 
-  <!-- Products Section -->
- <div class="product-card">
-  <div class="product-image">🍰</div>
-  <div class="product-info">
-    <div class="product-name">Product 1</div>
-    <div class="product-description">Delicious macaron with vanilla flavor.</div>
-    <div class="product-price">$10</div>
-    <div class="quantity-controls">
-      <button class="qty-btn minus">-</button>
-      <span class="qty">1</span>
-      <button class="qty-btn plus">+</button>
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+
+    <!-- SHOP PAGE -->
+    <div id="shop-section" class="page-section active">
+      <div class="product-grid" id="product-grid">
+        <!-- Products dynamically added -->
+      </div>
+    </div>
+
+    <!-- CART PAGE -->
+    <div id="cart-section" class="page-section">
+      <div id="cart-items"></div>
+      <div class="cart-total">
+        <div class="total-amount" id="total-amount">Total: $0</div>
+        <button id="whatsapp-btn" class="whatsapp-btn">Send Selected Products on WhatsApp</button>
+      </div>
+    </div>
+
+    <!-- PROFILE PAGE -->
+    <div id="profile-section" class="page-section">
+      <div class="profile-section">
+        <div class="profile-header">
+          <div class="profile-avatar">🍰</div>
+          <div class="profile-name" id="profile-name">Macaron Store</div>
+          <div class="profile-email" id="profile-email">info@macaronstore.com</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM NAVIGATION -->
+  <div class="bottom-nav">
+    <div class="nav-item active" data-page="shop-section">
+      <div class="nav-icon">🏠</div>
+      <div class="nav-label">Shop</div>
+    </div>
+    <div class="nav-item" data-page="cart-section">
+      <div class="nav-icon">🛒</div>
+      <div class="nav-label">Cart</div>
+      <div class="cart-badge" id="cart-badge">0</div>
+    </div>
+    <div class="nav-item" data-page="profile-section">
+      <div class="nav-icon">👤</div>
+      <div class="nav-label">Profile</div>
     </div>
   </div>
-</div>
-
-
-    <!-- WhatsApp Button -->
-    <button id="whatsapp-btn">Send Selected Products on WhatsApp</button>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>Contact us: <span id="shop-contact">info@myshop.com</span></p>
-  </footer>
 
   <script src="app.js"></script>
 </body>
