@@ -4,8 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Small Shop</title>
-
-  <!-- PWA Manifest -->
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="style.css">
   <meta name="theme-color" content="#4CAF50">
@@ -17,15 +15,21 @@
     <p>Your tagline goes here</p>
   </header>
 
+  <!-- Language Switch -->
+  <div id="language-switch">
+    <button data-lang="en">English</button>
+    <button data-lang="ar">العربية</button>
+  </div>
+
   <!-- Products Section -->
   <main>
     <section id="products">
       <h2>Our Products</h2>
-      <!-- Products injected dynamically -->
+      <!-- Products will be dynamically added -->
     </section>
 
     <!-- WhatsApp Button -->
-    <button id="whatsapp-btn">Send Product List on WhatsApp</button>
+    <button id="whatsapp-btn">Send Selected Products on WhatsApp</button>
   </main>
 
   <!-- Footer -->
@@ -33,7 +37,6 @@
     <p>Contact us: <span id="shop-contact">info@myshop.com</span></p>
   </footer>
 
-  <!-- Main JS -->
   <script src="app.js"></script>
 </body>
 </html>
