@@ -1,26 +1,53 @@
-// ====== Editable Variables ====== //
-// Replace your WhatsApp number here (country code + number)
-const whatsappNumber = "966512345678"; 
+// ======== CONFIGURATION (EDIT ONLY THIS SECTION) ======== //
 
-// Add your product list here
+// Shop Info
+const shopName = "My Small Shop";
+const shopTagline = "Your tagline goes here";
+const shopContact = "info@myshop.com";
+const shopHeaderColor = "#4CAF50"; // header background color
+
+// WhatsApp Number (include country code)
+const whatsappNumber = "966512345678";
+
+// Product List (image filename, name, price)
 const products = [
-  "Product 1 - $10",
-  "Product 2 - $15"
-  // Add more products as needed
+  { img: "product1.jpg", name: "Product 1", price: "$10" },
+  { img: "product2.jpg", name: "Product 2", price: "$15" },
+  // Add more products here
 ];
-// ====== End Editable Variables ====== //
+// ======== END CONFIGURATION ======== //
 
-// Function to create WhatsApp URL with product list
-function sendWhatsApp() {
-  const message = "Hello! I am interested in these products:\n" + products.join("\n");
+// Insert header info dynamically
+document.getElementById("shop-header").innerHTML = `
+  <h1>${shopName}</h1>
+  <p>${shopTagline}</p>
+`;
+document.getElementById("shop-header").style.backgroundColor = shopHeaderColor;
+
+// Insert contact dynamically
+document.getElementById("shop-contact").innerText = shopContact;
+
+// Insert products dynamically
+const productContainer = document.getElementById("products");
+products.forEach(p => {
+  const div = document.createElement("div");
+  div.className = "product";
+  div.innerHTML = `
+    <img src="${p.img}" alt="${p.name}">
+    <p>${p.name} - ${p.price}</p>
+  `;
+  productContainer.appendChild(div);
+});
+
+// WhatsApp Button Function
+document.getElementById("whatsapp-btn").addEventListener("click", () => {
+  const productList = products.map(p => `${p.name} - ${p.price}`).join("\n");
+  const message = `Hello! I am interested in these products:\n${productList}`;
   const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-  window.open(url, "_blank"); // Open WhatsApp link in new tab
-}
+  window.open(url, "_blank");
+});
 
-// Register button click
-document.getElementById("whatsapp-btn").addEventListener("click", sendWhatsApp);
-
-// ====== Service Worker Registration for PWA ====== //
+// Register Service Worker for PWA
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('./service-worker.js')
