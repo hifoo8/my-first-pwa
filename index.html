@@ -1,16 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My PWA App</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="manifest.json">
+  <title>متجري البسيط</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background: #f5f5f5;
+    }
+    button {
+      background: #25D366;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #1ebe5c;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to My PWA</h1>
-  <button onclick="openWhatsApp()">Contact via WhatsApp</button>
-
-  <script src="script.js"></script>
+  <h1>مرحباً بكم في متجري 🌸</h1>
+  <p>اضغط الزر للتواصل عبر واتساب:</p>
+  <a href="https://wa.me/966500000000" target="_blank">
+    <button>اطلب عبر واتساب</button>
+  </a>
 </body>
 </html>
