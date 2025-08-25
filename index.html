@@ -1,35 +1,55 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>متجري البسيط</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px;
-      background: #f5f5f5;
-    }
-    button {
-      background: #25D366;
-      color: white;
-      border: none;
-      padding: 15px 25px;
-      font-size: 16px;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #1ebe5c;
-    }
-  </style>
+  <title>My Small Shop</title>
+
+  <!-- Link to PWA manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Link to main CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Theme color for browser UI -->
+  <meta name="theme-color" content="#4CAF50">
 </head>
 <body>
-  <h1>مرحباً بكم في متجري 🌸</h1>
-  <p>اضغط الزر للتواصل عبر واتساب:</p>
-  <a href="https://wa.me/966500000000" target="_blank">
-    <button>اطلب عبر واتساب</button>
-  </a>
+  <!-- Header section -->
+  <header>
+    <h1>Welcome to My Shop</h1>
+    <p>Change this text to your shop name or slogan</p>
+  </header>
+
+  <!-- Main content section -->
+  <main>
+    <section id="products">
+      <h2>Our Products</h2>
+      
+      <!-- Product example -->
+      <div class="product">
+        <img src="product1.jpg" alt="Product 1">
+        <p>Product 1 - $10</p>
+      </div>
+
+      <div class="product">
+        <img src="product2.jpg" alt="Product 2">
+        <p>Product 2 - $15</p>
+      </div>
+
+      <!-- Add more products by copying the block above -->
+    </section>
+
+    <!-- WhatsApp Button -->
+    <button id="whatsapp-btn">Send Product List on WhatsApp</button>
+  </main>
+
+  <!-- Footer section -->
+  <footer>
+    <p>Contact us: info@myshop.com</p>
+  </footer>
+
+  <!-- Link to main JavaScript -->
+  <script src="app.js"></script>
 </body>
 </html>
