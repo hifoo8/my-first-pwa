@@ -1,23 +1,22 @@
-/* GENERAL STYLES */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   text-align: center;
   background-color: #f9f9f9;
+  direction: ltr;
 }
 
-/* HEADER */
 header {
-  background-color: #4CAF50; /* editable in JS */
+  background-color: #4CAF50;
   color: white;
   padding: 20px;
 }
 
-/* PRODUCTS */
 .product {
   display: inline-block;
   margin: 20px;
+  text-align: center;
 }
 
 .product img {
@@ -25,14 +24,22 @@ header {
   height: 150px;
   object-fit: cover;
   border-radius: 8px;
+  display: block;
+  margin-bottom: 5px;
 }
 
-/* WHATSAPP BUTTON */
+/* Checkbox style */
+.product input[type="checkbox"] {
+  margin-top: 5px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
 #whatsapp-btn {
   margin: 20px;
   padding: 15px 25px;
   font-size: 16px;
-  background-color: #25D366; /* WhatsApp green */
+  background-color: #25D366;
   color: white;
   border: none;
   border-radius: 8px;
@@ -43,7 +50,24 @@ header {
   background-color: #128C7E;
 }
 
-/* FOOTER */
+#language-switch {
+  margin: 10px;
+}
+
+#language-switch button {
+  margin: 0 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #4CAF50;
+  background-color: white;
+}
+
+#language-switch button:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
 footer {
   background-color: #333;
   color: white;
