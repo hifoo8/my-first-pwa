@@ -1,7 +1,6 @@
-self.addEventListener("install", (e) => {
-  console.log("Service Worker: Installed");
-});
-
-self.addEventListener("fetch", (e) => {
-  console.log("Service Worker: Fetching", e.request.url);
-});
+function openWhatsApp() {
+  // ضع رقمك هنا
+  let phoneNumber = "966500000000"; 
+  let url = `https://wa.me/${phoneNumber}`;
+  window.open(url, "_blank");
+}
