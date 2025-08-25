@@ -5,51 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Small Shop</title>
 
-  <!-- Link to PWA manifest -->
+  <!-- PWA Manifest -->
   <link rel="manifest" href="manifest.json">
-
-  <!-- Link to main CSS -->
   <link rel="stylesheet" href="style.css">
-
-  <!-- Theme color for browser UI -->
   <meta name="theme-color" content="#4CAF50">
 </head>
 <body>
-  <!-- Header section -->
-  <header>
-    <h1>Welcome to My Shop</h1>
-    <p>Change this text to your shop name or slogan</p>
+  <!-- Header -->
+  <header id="shop-header">
+    <h1>My Small Shop</h1>
+    <p>Your tagline goes here</p>
   </header>
 
-  <!-- Main content section -->
+  <!-- Products Section -->
   <main>
     <section id="products">
       <h2>Our Products</h2>
-      
-      <!-- Product example -->
-      <div class="product">
-        <img src="product1.jpg" alt="Product 1">
-        <p>Product 1 - $10</p>
-      </div>
-
-      <div class="product">
-        <img src="product2.jpg" alt="Product 2">
-        <p>Product 2 - $15</p>
-      </div>
-
-      <!-- Add more products by copying the block above -->
+      <!-- Products injected dynamically -->
     </section>
 
     <!-- WhatsApp Button -->
     <button id="whatsapp-btn">Send Product List on WhatsApp</button>
   </main>
 
-  <!-- Footer section -->
+  <!-- Footer -->
   <footer>
-    <p>Contact us: info@myshop.com</p>
+    <p>Contact us: <span id="shop-contact">info@myshop.com</span></p>
   </footer>
 
-  <!-- Link to main JavaScript -->
+  <!-- Main JS -->
   <script src="app.js"></script>
 </body>
 </html>
