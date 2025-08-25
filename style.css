@@ -1,20 +1,52 @@
+/* General body style */
 body {
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   text-align: center;
-  padding: 50px;
-  background: #f5f5f5;
+  background-color: #f9f9f9;
 }
 
-button {
-  background: #25D366;
+/* Header style */
+header {
+  background-color: #4CAF50;
   color: white;
-  border: none;
+  padding: 20px;
+}
+
+/* Product section */
+.product {
+  display: inline-block;
+  margin: 20px;
+}
+
+/* Product images */
+.product img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* WhatsApp Button */
+#whatsapp-btn {
+  margin: 20px;
   padding: 15px 25px;
   font-size: 16px;
+  background-color: #25D366; /* WhatsApp green */
+  color: white;
+  border: none;
   border-radius: 8px;
   cursor: pointer;
 }
 
-button:hover {
-  background: #1ebe5c;
+#whatsapp-btn:hover {
+  background-color: #128C7E;
+}
+
+/* Footer style */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
 }
