@@ -31,11 +31,18 @@ body {
 }
 
 .logo {
-    max-height: 120px;   /* allow larger logo */
-    width: auto;         /* keep aspect ratio */
+    width: auto;          /* keep aspect ratio */
+    max-height: 120px;    /* control how tall it appears in the header */
     display: block;
-    margin: 0 auto 15px auto; /* center and spacing */
+    margin: 0 auto 15px;  /* center it */
 }
+@media (max-width: 768px) {
+    .logo { max-height: 90px; }
+}
+@media (max-width: 480px) {
+    .logo { max-height: 70px; }
+}
+
 
 .store-title {
     font-size: 24px;
@@ -433,4 +440,5 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: #A68A6D;
 }
+
 
