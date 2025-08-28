@@ -54,7 +54,15 @@ padding: 20px 0;
     font-weight: 700;
     color: #6B4F3C; /* primary brown */
 }
+@media (max-width: 768px) {
+  .logo { max-height: 150px; }
+  .store-title { font-size: 24px; }
+}
 
+@media (max-width: 480px) {
+  .logo { max-height: 120px; }
+  .store-title { font-size: 20px; }
+}
 /* ===================================
    MAIN CONTENT CONTAINER
    =================================== */
