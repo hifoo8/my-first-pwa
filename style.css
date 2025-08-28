@@ -32,7 +32,7 @@ body {
     z-index: 100;
 }
 
-.top-bar .logo {
+ .logo {
   height: 50px;   /* adjust as needed */
   width: auto;
   margin-right: 10px; /* space between logo and title */
