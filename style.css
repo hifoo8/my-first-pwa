@@ -37,30 +37,18 @@ padding: 20px 0;
 
 
 .logo {
-max-height: 150px; /* adjust as needed */
-width: auto;
-display: block;
-margin: 0 auto 10px auto; /* space below logo */
+  max-height: 200px;   /* زودت الحجم (كان 150px) */
+  width: auto;
+  display: block;
+  margin: 0 auto 5px auto; /* قللت المسافة بين الشعار والنص (كان 10px) */
 }
-
 
 .store-title {
-font-size: 28px;
-font-weight: 700;
-color: #6B4F3C;
+  font-size: 28px;
+  font-weight: 700;
+  color: #6B4F3C;
+  margin-top: 0;       /* يضمن ما يكون فيه فراغ إضافي فوق النص */
 }
-
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-.logo { max-height: 120px; }
-.store-title { font-size: 24px; }
-}
-@media (max-width: 480px) {
-.logo { max-height: 90px; }
-.store-title { font-size: 20px; }
-}
-
 .store-title {
     font-size: 24px;
     font-weight: 700;
