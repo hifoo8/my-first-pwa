@@ -32,11 +32,15 @@ body {
     z-index: 100;
 }
 
- .logo {
-  height: 50px;   /* adjust as needed */
-  width: auto;
-  margin-right: 10px; /* space between logo and title */
+/* Logo inside top bar */
+.top-bar .logo {
+    height: 50px;        /* adjust to your preference */
+    width: auto;         /* keep aspect ratio */
+    margin-right: 15px;  /* spacing between logo and title */
+    display: inline-block;
+    vertical-align: middle;
 }
+
 
 .store-title {
     font-size: 24px;
@@ -432,3 +436,4 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: #FFD700;
 }
+
