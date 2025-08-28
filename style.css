@@ -110,9 +110,10 @@ body {
 .product-price {
     font-size: 20px;
     font-weight: 700;
-    color: #A68A6D;
+    color: #6B4F3C; /* Darker brown */
     margin-bottom: 15px;
 }
+
 
 /* ===================================
    BUTTON STYLES
@@ -267,10 +268,10 @@ body {
     margin-bottom: 5px;
 }
 
-.cart-item-price {
-    color: #A68A6D;
+/* Cart Item Price */
+ .cart-item-price {
+    color: #6B4F3C; /* Darker brown for visibility */
     font-weight: 600;
-}
 
 .quantity-controls {
     display: flex;
@@ -279,6 +280,7 @@ body {
     margin-top: 10px;
 }
 
+/* Cart Total */
 .cart-total {
     background: #DCC7AA;
     padding: 20px;
@@ -290,7 +292,7 @@ body {
 .total-amount {
     font-size: 24px;
     font-weight: 700;
-    color: #6B4F3C;
+    color: #6B4F3C; /* Strong emphasis */
     margin-bottom: 15px;
 }
 
@@ -434,3 +436,4 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: #6B4F3C;
 }
+
