@@ -31,10 +31,10 @@ body {
 }
 
 .logo {
-    height: 60px;
-    width: auto;
+    max-height: 120px;   /* allow larger logo */
+    width: auto;         /* keep aspect ratio */
     display: block;
-    margin: 0 auto 10px auto;
+    margin: 0 auto 15px auto; /* center and spacing */
 }
 
 .store-title {
@@ -433,3 +433,4 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: #A68A6D;
 }
+
