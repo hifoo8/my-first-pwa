@@ -12,36 +12,35 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #FFFFFF;
-    color: #333;
+    background: linear-gradient(135deg, #FAF7F2 0%, #DCC7AA 100%);
+    color: #333333;
     line-height: 1.6;
     padding-bottom: 80px; /* Space for bottom navigation */
 }
 
 /* ===================================
-   TOP BAR STYLES
+   TOP BAR STYLES (Centered Logo & Title)
    =================================== */
 .top-bar {
-    background: linear-gradient(135deg, #DCC7AA 0%, #A68A6D 100%);
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background: transparent;
+    padding: 20px;
+    text-align: center;
     position: sticky;
     top: 0;
     z-index: 100;
 }
 
 .logo {
-  height: 50px;   /* adjust as needed */
-  width: auto;
-  margin-right: 10px; /* space between logo and title */
+    height: 60px;
+    width: auto;
+    display: block;
+    margin: 0 auto 10px auto;
 }
 
 .store-title {
     font-size: 24px;
-    font-weight: 600;
-    color: #333;
+    font-weight: 700;
+    color: #6B4F3C; /* primary brown */
 }
 
 /* ===================================
@@ -63,7 +62,6 @@ body {
     margin-top: 20px;
 }
 
-/* Product Card Styles */
 .product-card {
     background: #FFFFFF;
     border-radius: 15px;
@@ -81,7 +79,7 @@ body {
 .product-image {
     width: 100%;
     height: 200px;
-    background: linear-gradient(45deg, #DCC7AA, #A68A6D);
+    background: linear-gradient(45deg, #FAF7F2, #DCC7AA);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -97,12 +95,12 @@ body {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 8px;
-    color: #333;
+    color: #333333;
 }
 
 .product-description {
     font-size: 14px;
-    color: #666;
+    color: #666666;
     margin-bottom: 15px;
     line-height: 1.4;
 }
@@ -110,17 +108,16 @@ body {
 .product-price {
     font-size: 20px;
     font-weight: 700;
-    color: #6B4F3C; /* darker brown emphasis */
+    color: #6B4F3C;
     margin-bottom: 15px;
 }
 
 /* ===================================
    BUTTON STYLES
    =================================== */
-/* WhatsApp Button */
 .whatsapp-btn {
     width: 100%;
-    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    background: linear-gradient(135deg, #A68A6D 0%, #6B4F3C 100%);
     color: white;
     border: none;
     padding: 12px 20px;
@@ -137,10 +134,9 @@ body {
 
 .whatsapp-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    box-shadow: 0 4px 15px rgba(166, 138, 109, 0.3);
 }
 
-/* Quantity Control Buttons */
 .qty-btn {
     width: 30px;
     height: 30px;
@@ -187,7 +183,7 @@ body {
 
 .nav-item.active {
     background: #DCC7AA;
-    color: #333;
+    color: #333333;
 }
 
 .nav-item:hover {
@@ -197,20 +193,21 @@ body {
 .nav-icon {
     font-size: 20px;
     margin-bottom: 4px;
+    color: #6B4F3C;
 }
 
 .nav-label {
     font-size: 12px;
     font-weight: 500;
+    color: #333333;
 }
 
-/* Cart Badge */
 .cart-badge {
     position: absolute;
     top: -5px;
     right: -5px;
     background: #A68A6D;
-    color: #333;
+    color: #FFFFFF;
     border-radius: 50%;
     width: 20px;
     height: 20px;
@@ -249,12 +246,13 @@ body {
 .cart-item-image {
     width: 60px;
     height: 60px;
-    background: linear-gradient(45deg, #DCC7AA, #A68A6D);
+    background: linear-gradient(45deg, #FAF7F2, #DCC7AA);
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 24px;
+    color: #6B4F3C;
 }
 
 .cart-item-info {
@@ -264,10 +262,11 @@ body {
 .cart-item-name {
     font-weight: 600;
     margin-bottom: 5px;
+    color: #333333;
 }
 
 .cart-item-price {
-    color: #6B4F3C; /* darker brown */
+    color: #6B4F3C;
     font-weight: 600;
 }
 
@@ -289,7 +288,7 @@ body {
 .total-amount {
     font-size: 24px;
     font-weight: 700;
-    color: #6B4F3C; /* darker brown */
+    color: #6B4F3C;
     margin-bottom: 15px;
 }
 
@@ -312,23 +311,25 @@ body {
 .profile-avatar {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, #DCC7AA, #A68A6D);
+    background: linear-gradient(135deg, #FAF7F2, #DCC7AA);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 32px;
     margin: 0 auto 15px;
+    color: #6B4F3C;
 }
 
 .profile-name {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 5px;
+    color: #333333;
 }
 
 .profile-email {
-    color: #666;
+    color: #666666;
     font-size: 14px;
 }
 
@@ -346,7 +347,7 @@ body {
     width: 40px;
     height: 40px;
     border: 4px solid #f3f3f3;
-    border-top: 4px solid #DCC7AA;
+    border-top: 4px solid #6B4F3C;
     border-radius: 50%;
     animation: spin 1s linear infinite;
 }
