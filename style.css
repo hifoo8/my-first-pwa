@@ -28,7 +28,7 @@ body {
   align-items: center; /* Center the items horizontally */
   background: transparent;
   padding: 20px;
-  position: sticky;
+ /* position: sticky;*/
   top: 0;
   z-index: 100;
 }
@@ -449,6 +449,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: #A68A6D;
 }
+
 
 
 
