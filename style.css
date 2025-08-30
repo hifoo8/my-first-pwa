@@ -21,39 +21,34 @@ body {
 /* ===================================
    TOP BAR STYLES (Centered Logo & Title)
    =================================== */
+/* CONSOLIDATED AND FIXED TOP BAR STYLES */
 .top-bar {
-    background: transparent;
-    padding: 20px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  display: flex; /* Use Flexbox for aligned items */
+  flex-direction: column; /* Stack logo and title vertically */
+  align-items: center; /* Center the items horizontally */
+  background: transparent;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.top-bar {
-text-align: center;
-padding: 20px 0;
-}
-
-
+/* CONSOLIDATED LOGO STYLES */
 .logo {
-  max-height: 200px;   /* زودت الحجم (كان 150px) */
+  max-height: 200px;
   width: auto;
-  display: block;
-  margin: 0 auto 0px auto; /* قللت المسافة بين الشعار والنص (كان 10px) */
+  margin-bottom: 0px; /* Adjust this value to set the space below the logo */
 }
 
+/* CONSOLIDATED STORE TITLE STYLES */
 .store-title {
   font-size: 28px;
   font-weight: 700;
   color: #6B4F3C;
-  margin-top: 0;       /* يضمن ما يكون فيه فراغ إضافي فوق النص */
+  margin-top: 0;
 }
-.store-title {
-    font-size: 24px;
-    font-weight: 700;
-    color: #6B4F3C; /* primary brown */
-}
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
 @media (max-width: 768px) {
   .logo { max-height: 150px; }
   .store-title { font-size: 24px; }
@@ -63,6 +58,7 @@ padding: 20px 0;
   .logo { max-height: 120px; }
   .store-title { font-size: 20px; }
 }
+
 /* ===================================
    MAIN CONTENT CONTAINER
    =================================== */
@@ -453,6 +449,7 @@ padding: 20px 0;
 ::-webkit-scrollbar-thumb:hover {
     background: #A68A6D;
 }
+
 
 
 
