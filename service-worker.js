@@ -1,4 +1,5 @@
-const CACHE_NAME = 'macaron-store-cache-v1';
+// Auto-updating service worker for Macaron Store PWA
+const CACHE_NAME = 'macaron-store-cache-' + Date.now();
 const urlsToCache = [
   './',
   './index.html',
@@ -12,6 +13,8 @@ self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => cache.addAll(urlsToCache))
   );
+  // Activate this service worker immediately
+  self.skipWaiting();
 });
 
 // Activate: Clean up old caches
@@ -21,14 +24,20 @@ self.addEventListener('activate', event => {
       Promise.all(keys.filter(key => key !== CACHE_NAME).map(key => caches.delete(key)))
     )
   );
+  // Take control of open clients immediately
+  self.clients.claim();
 });
 
-// Fetch: Network-first for CSS/JS, cache-first for everything else
+// Fetch: Network-first for HTML/CSS/JS, cache-first for others
 self.addEventListener('fetch', event => {
   const { request } = event;
 
-  if (request.destination === 'style' || request.destination === 'script') {
-    // Network-first for CSS & JS
+  if (
+    request.destination === 'document' ||
+    request.destination === 'script' ||
+    request.destination === 'style'
+  ) {
+    // Network-first
     event.respondWith(
       fetch(request)
         .then(response => {
@@ -36,10 +45,10 @@ self.addEventListener('fetch', event => {
           caches.open(CACHE_NAME).then(cache => cache.put(request, clone));
           return response;
         })
-        .catch(() => caches.match(request)) // Fallback to cache if offline
+        .catch(() => caches.match(request))
     );
   } else {
-    // Cache-first for everything else (HTML, images, fonts, etc.)
+    // Cache-first for images, fonts, etc.
     event.respondWith(
       caches.match(request).then(response => response || fetch(request))
     );
