@@ -40,7 +40,7 @@ padding: 20px 0;
   max-height: 200px;   /* زودت الحجم (كان 150px) */
   width: auto;
   display: block;
-  margin: 0 auto 5px auto; /* قللت المسافة بين الشعار والنص (كان 10px) */
+  margin: 0 auto 0px auto; /* قللت المسافة بين الشعار والنص (كان 10px) */
 }
 
 .store-title {
@@ -453,6 +453,7 @@ padding: 20px 0;
 ::-webkit-scrollbar-thumb:hover {
     background: #A68A6D;
 }
+
 
 
 
